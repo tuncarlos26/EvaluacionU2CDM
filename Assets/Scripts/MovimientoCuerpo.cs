@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MovimientoPelea : MonoBehaviour
+public class MovimientoCuerpo : MonoBehaviour
 {
-    public float velocidad = 5f;
+    public float velocidad = 4f;
+
     private Rigidbody2D rb;
+    
     private Vector2 movimiento;
 
     void Awake()
@@ -20,5 +22,6 @@ public class MovimientoPelea : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = movimiento * velocidad;
+
     }
 }
